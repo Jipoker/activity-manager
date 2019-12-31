@@ -31,7 +31,7 @@ public class User {
 
     private Boolean isEnable;
 
-    @OneToMany(targetEntity = Authority.class, mappedBy = "id", fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = Authority.class, fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_authorities",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
